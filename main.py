@@ -85,3 +85,6 @@ class TjugoettSpel:  # börjar på tjogoettklass
                 # avsluta gamet om spelaren väljer att inte dra fler kort
                 break
 
+        # dealern drar kort tills den har minst 17 som vanligt i kortspel
+        while dealer.rakna_poang() < 17:
+            dealer.drakort(self.kortlek.dra_kort())
