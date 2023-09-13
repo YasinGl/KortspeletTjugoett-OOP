@@ -1,5 +1,7 @@
 import random  # importera random modul för att blanda kortleken
 from kort import Kortlek
+from spelare import Spelare
+
 
 class TjugoettSpel:  # börjar på tjogoettklass
     def __init__(self):
