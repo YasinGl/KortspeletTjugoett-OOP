@@ -39,7 +39,7 @@ class TjugoettSpel:  # börjar på tjogoettklass
         print("Välkommen till Tjugoett!")
         print("Vi önskar dig stort lycka till, du kommer behöva det!")
 
-# det här är en huvudloop där spelaren kan välja att starta eller avsluta gamet
+# det här är en huvudloop där spelaren kan välja att starta eller avsluta gamet, jag har använt ja och nej för att kolla detta
         while True:
             # här frågar jag spelare om man vill spela eller inte
             val = input("Starta spel? Ja/Nej?: ").lower()
