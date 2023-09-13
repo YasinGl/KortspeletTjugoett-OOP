@@ -4,7 +4,7 @@ import random  # importera random modul för att blanda kortleken
 class Kortlek:
     def __init__(self):
         # skapa en ny kortlek, genom att multiplicera varje kortvärde med 4 hjärter ruter klöver och spader
-        self.kortlek = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 14] * 4  #här har jag lagt in s som 14
+        self.kortlek = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 14] * 4  # här har jag lagt in s som 14
         random.shuffle(self.kortlek)  # blanda kortleken vid skapandet.
 
     def dra_kort(self):
@@ -30,11 +30,12 @@ class Spelare:
         return " : ".join(map(str, self.hand))  # konverterar till sträng för att visa kort annars går det ej
 
 
-class TjugoettSpel: # börjar på tjogoettklass
+class TjugoettSpel:  # börjar på tjogoettklass
     def __init__(self):
         self.kortlek = Kortlek()
 
-    def starta(self): #skapar en funktion och lägger pass för att jag inte vill använda den just nu. då undviker jag error från pycharm
-        pass #denna ska jag använda för att starta spelet sen
-
+    def starta(self):
+        # säger till spelaren välkommen och hälsning
+        print("Välkommen till Tjugoett!")
+        print("Vi önskar dig stort lycka till, du kommer behöva det!")
 
