@@ -56,7 +56,7 @@ class TjugoettSpel:  # börjar på tjogoettklass
                 print("Vänligen svara JA eller NEJ!")
 
     def spela(self):
-        # skapa en ny spelare och delaer varje omgång
+        # skapa en ny spelare och dealer varje omgång
         spelare = Spelare()
         dealer = Spelare()
 
