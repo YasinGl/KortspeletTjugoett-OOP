@@ -60,7 +60,7 @@ class TjugoettSpel:  # börjar på tjogoettklass
         spelare = Spelare()
         dealer = Spelare()
 
-        # delar ut 2 kort var till seplare och dealer
+        # delar ut 2 kort var till spelare och dealer
         for _ in range(2):
             spelare.drakort(self.kortlek.dra_kort())
             dealer.drakort(self.kortlek.dra_kort())
