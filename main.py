@@ -4,16 +4,16 @@ import random  # importera random modul för att blanda kortleken
 class Kortlek:
     def __init__(self):
         # skapa en ny kortlek, genom att multiplicera varje kortvärde med 4 hjärter ruter klöver och spader
-        self.kortlek = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 14] * 4
-        random.shuffle(self.kortlek)  # Blanda kortleken vid skapandet.
+        self.kortlek = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 14] * 4  #här har jag lagt in s som 14
+        random.shuffle(self.kortlek)  # blanda kortleken vid skapandet.
 
     def dra_kort(self):
-        return self.kortlek.pop()  # dra kort från kortlek och retunera det
+        return self.kortlek.pop()  # dra kort från kortlek och retunera det in
 
 
 class Spelare:
     def __init__(self):
-        self.hand = []  # skapad en tom hand för spelaren alltså jag
+        self.hand = []  # skapad en tom hand för spelaren alltså jag som är spelare
 
     def drakort(self, kort):
         self.hand.append(kort)  # lägger till kort i spelarens hand
@@ -27,7 +27,7 @@ class Spelare:
         return poang
 
     def visa_hand(self):
-        return " : ".join(map(str, self.hand))  # konverterar till sträng för att visa kort
+        return " : ".join(map(str, self.hand))  # konverterar till sträng för att visa kort annars går det ej
 
 
 class TjugoettSpel: # börjar på tjogoettklass
