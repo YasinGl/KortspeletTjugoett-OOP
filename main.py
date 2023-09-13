@@ -30,6 +30,8 @@ class Spelare:
         return " : ".join(map(str, self.hand))  # konverterar till sträng för att visa kort
 
 
-class TjugoettSpel: # börjar på tjogoettklasss
+class TjugoettSpel: # börjar på tjogoettklass
     def __init__(self):
         self.kortlek = Kortlek()
+
+
