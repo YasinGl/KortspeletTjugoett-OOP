@@ -54,3 +54,14 @@ class TjugoettSpel:  # börjar på tjogoettklass
             # fel hantering om man svarar nåt helt annat
             else:
                 print("Vänligen svara JA eller NEJ!")
+
+    def spela(self):
+        # skapa en ny spelare och delaer varje omgång
+        spelare = Spelare()
+        dealer = Spelare()
+
+        # delar ut 2 kort var till seplare och dealer
+        for _ in range(2):
+            spelare.drakort(self.kortlek.dra_kort())
+            dealer.drakort(self.kortlek.dra_kort())
+
