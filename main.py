@@ -65,3 +65,23 @@ class TjugoettSpel:  # börjar på tjogoettklass
             spelare.drakort(self.kortlek.dra_kort())
             dealer.drakort(self.kortlek.dra_kort())
 
+   # gamet börjar nu kan spelaren välja om man vill dra ett kort eller stanna
+        while True:
+            # visar hand och poäng
+            print(f"Din hand: {spelare.visa_hand()}, Poäng: {spelare.rakna_poang()}")
+            # visar dealer första kort ,en den andra är dold
+            print(f"Dealerns hand: {dealer.hand[0]} _")
+            # frågar spelaren vad den vill göra dra kort eller ej
+            val = input("Vill du dra ett kort? (J/N): ").lower()
+            if val == "j":
+                # drar kort från leken till spelarens hand
+                spelare.drakort(self.kortlek.dra_kort())
+                # kollar om spelaren har fått över 21 poäng
+                if spelare.rakna_poang() > 21:
+                    print(f"Din hand: {spelare.visa_hand()}, Poäng: {spelare.rakna_poang()}")
+                    print("Du har över 21 poäng. Du förlorar.")
+                    break
+            else:
+                # avsluta gamet om spelaren väljer att inte dra fler kort
+                break
+
