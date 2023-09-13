@@ -88,3 +88,7 @@ class TjugoettSpel:  # börjar på tjogoettklass
         # dealern drar kort tills den har minst 17 som vanligt i kortspel
         while dealer.rakna_poang() < 17:
             dealer.drakort(self.kortlek.dra_kort())
+
+        #  visar resultat för spelare och dealer
+        print(f"Din hand: {spelare.visa_hand()}, Poäng: {spelare.rakna_poang()}")
+        print(f"Dealerns hand: {dealer.visa_hand()}, Poäng: {dealer.rakna_poang()}")
