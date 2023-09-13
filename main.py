@@ -4,7 +4,7 @@ import random  #Importera random modul för att blanda kortleken.
 class Kortlek:
    def __init__(self):
        # skapa en ny kortlek, genom att multiplicera varje kortvärde med 4 hjärter ruter klöver och spader
-       self.kortlek = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11] * 4
+       self.kortlek = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 14] * 4
        random.shuffle(self.kortlek)  # Blanda kortleken vid skapandet.
 
 
@@ -29,4 +29,3 @@ class Spelare:
 
     def visa_hand(self):
         return " : ".join(map(str, self.hand))  #konverterar till sträng för att visa kort
-
