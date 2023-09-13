@@ -92,3 +92,18 @@ class TjugoettSpel:  # börjar på tjogoettklass
         #  visar resultat för spelare och dealer
         print(f"Din hand: {spelare.visa_hand()}, Poäng: {spelare.rakna_poang()}")
         print(f"Dealerns hand: {dealer.visa_hand()}, Poäng: {dealer.rakna_poang()}")
+        # kollar resultatet och vem som vinner
+        if spelare.rakna_poang() > 21:
+            print("Dealern vinner. Du har över 21 poäng. (BUST)")
+        elif dealer.rakna_poang() > 21 or spelare.rakna_poang() > dealer.rakna_poang():
+            print("Grattis! Du vinner! Hur gjorde du detta?")
+        elif spelare.rakna_poang() == dealer.rakna_poang():
+            print("Huset vinner tyvärr! Lycka till nästa gång.")
+        else:
+            print("Dealern vinner. Du kanske borde prova ett annat spel?")
+
+
+# skapar spelobjektet
+spel = TjugoettSpel()
+# startat spelet
+spel.starta()
