@@ -34,4 +34,7 @@ class TjugoettSpel: # börjar på tjogoettklass
     def __init__(self):
         self.kortlek = Kortlek()
 
+    def starta(self): #skapar en funktion och lägger pass för att jag inte vill använda den just nu. då undviker jag error från pycharm
+        pass
+
 
